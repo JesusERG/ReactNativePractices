@@ -29,14 +29,14 @@ import { View, TextInput, Button, Alert, Text } from 'react-native';
 
 export default function App() {
   //RE RENDERING
-  const [render, setRender] = useState(0);
+  const [, setRender] = useState(0);
   Alert.alert('RE renderd');
-  let a = 10;
+  let a: number = 10;
 
   //INPUT FOCUS CASE
-  const inputRef = useRef(null);
+  const inputRef = useRef<TextInput>(null);
   const handleFocus = () => {
-    inputRef.current.focus(); // Focuses the TextInput when the button is pressed
+    inputRef.current?.focus(); // Focuses the TextInput when the button is pressed
   };
 
   //MUTABLE VALUES
