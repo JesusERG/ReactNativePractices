@@ -1,4 +1,4 @@
-import { SafeAreaView, Pressable, Text } from 'react-native';
+import { SafeAreaView, Pressable, Text, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const Main = () => {
@@ -14,6 +14,13 @@ const Main = () => {
       >
         <Text>Go to useRef implementation</Text>
       </Pressable>
+
+      <Button
+        title="Go to class components"
+        onPress={() => {
+          navigation.navigate('ClassComponents' as never);
+        }}
+      />
     </SafeAreaView>
   );
 };
