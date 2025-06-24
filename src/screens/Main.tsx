@@ -21,6 +21,12 @@ const Main = () => {
           navigation.navigate('ClassComponents' as never);
         }}
       />
+      <Button
+        title="Go to counter"
+        onPress={() => {
+          navigation.navigate('CounterScreen' as never);
+        }}
+      />
     </SafeAreaView>
   );
 };
