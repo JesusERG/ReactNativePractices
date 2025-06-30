@@ -46,6 +46,20 @@ const Main = () => {
       />
 
       <Button
+        title="Go to WebView"
+        onPress={() => {
+          navigation.navigate('WebViewScreen' as never);
+        }}
+      />
+
+      <Button
+        title="Go to Optimization"
+        onPress={() => {
+          navigation.navigate('OptimizationScreen' as never);
+        }}
+      />
+
+      <Button
         title="Change signedIn"
         onPress={() => {
           setSignedIn(!signedIn);
