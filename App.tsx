@@ -7,12 +7,17 @@
 
 import { NavigationContainer } from '@react-navigation/native';
 import DynamicStackNavigation from './src/navigation/DynamicStackNavigation';
+import { DisplayContext } from './src/context/DisplayContext';
+import { useState } from 'react';
 
 function App() {
+  const [signedIn, setSignedIn] = useState(false);
   return (
-    <NavigationContainer>
-      <DynamicStackNavigation />
-    </NavigationContainer>
+    <DisplayContext.Provider value={{ signedIn, setSignedIn }}>
+      <NavigationContainer>
+        <DynamicStackNavigation />
+      </NavigationContainer>
+    </DisplayContext.Provider>
   );
 }
 
